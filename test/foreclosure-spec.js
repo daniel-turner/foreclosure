@@ -36,9 +36,9 @@ describe('foreclosure', function() {
   });
 
   describe('loan()', function() {
-    
+
     describe('returns a literal object that', function() {
-      
+
       var loan;
 
       beforeEach(function () {
@@ -46,7 +46,7 @@ describe('foreclosure', function() {
       });
 
       describe('has a key named `getBalance`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           loan.should.have.property('getBalance');
           (typeof loan.getBalance).should.equal('function');
@@ -59,7 +59,7 @@ describe('foreclosure', function() {
       });
 
       describe('has a key named `receivePayment`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           loan.should.have.property('receivePayment');
           (typeof loan.receivePayment).should.equal('function');
@@ -77,9 +77,9 @@ describe('foreclosure', function() {
         });
 
       });
-      
+
       describe('has a key named `getMonthlyPayment`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           loan.should.have.property('getMonthlyPayment');
           (typeof loan.getMonthlyPayment).should.equal('function');
@@ -92,13 +92,13 @@ describe('foreclosure', function() {
       });
 
       describe('has a key named `isForeclosed`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           loan.should.have.property('isForeclosed');
           (typeof loan.isForeclosed).should.equal('function');
         });
 
-        it('should create a closure when the function is invoked, and returns the value of the `monthlyPayment` property of `account`', function() {
+        it('should create a closure when the function is invoked, and returns the value of the `foreclosed` property of `account`', function() {
           loan.isForeclosed().should.equal(false);
         });
 
@@ -123,9 +123,9 @@ describe('foreclosure', function() {
   });
 
   describe('borrower()', function() {
-    
+
     describe('returns a literal object that', function() {
-      
+
       var borrower;
 
       beforeEach(function () {
@@ -134,7 +134,7 @@ describe('foreclosure', function() {
       });
 
       describe('has a key named `getFunds`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           borrower.should.have.property('getFunds');
           (typeof borrower.getFunds).should.equal('function');
@@ -147,7 +147,7 @@ describe('foreclosure', function() {
       });
 
       describe('has a key named `makePayment`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           borrower.should.have.property('makePayment');
           (typeof borrower.makePayment).should.equal('function');
@@ -172,7 +172,7 @@ describe('foreclosure', function() {
       });
 
       describe('has a key named `payDay`', function() {
-        
+
         it('should be an unnamed function expression', function() {
           borrower.should.have.property('payDay');
           (typeof borrower.payDay).should.equal('function');
